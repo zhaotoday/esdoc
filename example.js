@@ -1,15 +1,3 @@
-## 介绍
-ESDoc 是一个 JavaScript 文档生成器，按照规范编写代码注释，即可生成友好的 JavaScript 代码文档。
-
-## 应用场景
-目前，我们前端团队在开发通用组件（React 和 Vue）、工具和类库等时，强制要求按照 ESDoc 规范编写注释，便于团队其他成员快速阅读和使用，减少沟通成本。
-
-## 参考
-- https://esdoc.org/
-- https://esdoc.org/manual/usage/tags.html
-
-## 比较完整的例子
-```js
 /**
  * 一个关于动物的类
  * 如果你想了解关于人的类的详情，请参考 {@link Person}
@@ -122,4 +110,3 @@ class Person extends Animal {
 const person = new Person('zjt', 29, ['eat', 'speek', 'run'])
 person.name = 'zhaojintian'
 console.log(person.getWords('Hello.'))
-```
