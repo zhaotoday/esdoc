@@ -4,6 +4,9 @@ ESDoc 是一个 JavaScript 文档生成器，按照规范编写代码注释，�
 ## 应用场景
 目前，我们前端团队在开发通用组件（React 和 Vue）、工具和类库等时，强制要求按照 ESDoc 规范编写注释，便于团队其他成员快速阅读和使用，减少沟通成本。
 
+## 尝试
+把自己的代码贴进来试试：https://try.esdoc.org/ 。
+
 ## 参考
 - https://esdoc.org/
 - https://esdoc.org/manual/usage/tags.html
