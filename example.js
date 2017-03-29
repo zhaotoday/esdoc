@@ -9,13 +9,27 @@
 class Animal {
   /**
    * 构造方法
-   * @param name {string} 名字
-   * @param age {number} 年龄
-   * @param abilities {string[]} 拥有的能力
+   * @param {string} name 名字
+   * @param {number} age 年龄
+   * @param {string[]} abilities 拥有的能力
    */
   constructor(name, age, abilities) {
+    /**
+     * 名字
+     * @type {string}
+     */
     this.name = name
+
+    /**
+     * 年龄
+     * @type {number}
+     */
     this.age = age
+
+    /**
+     * 年龄
+     * @type {string[]}
+     */
     this.abilities = abilities
 
     /**
