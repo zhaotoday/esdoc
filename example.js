@@ -27,7 +27,7 @@ class Animal {
     this.age = age
 
     /**
-     * 年龄
+     * 拥有的能力
      * @type {string[]}
      */
     this.abilities = abilities
@@ -79,6 +79,13 @@ class Animal {
  * @extends {Animal}
  */
 class Person extends Animal {
+
+  /**
+   * 财产
+   * @type {number}
+   */
+  _money = 100
+
   /**
    * 吃饭方法
    * @override
@@ -118,6 +125,13 @@ class Person extends Animal {
   setInfo({name, age = 10}) {
     this.name = name
     this.age = age
+  }
+
+  /**
+   * 获取财产
+   */
+  _getMoney() {
+    return this._money
   }
 }
 
