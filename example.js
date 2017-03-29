@@ -1,4 +1,11 @@
 /**
+ * @deprecated 该类已弃用，请用 Animal 代替
+ */
+class MyAnimal {
+  // MyAnimal 的实现代码
+}
+
+/**
  * 一个关于动物的类
  * 如果你想了解关于人的类的详情，请参考 {@link Person}
  * @see https://github.com/zhaotoday/esdoc
@@ -9,11 +16,11 @@
 class Animal {
   /**
    * 构造方法
-   * @param {string} name 名字
-   * @param {number} age 年龄
-   * @param {string[]} abilities 拥有的能力
+   * @param {string} [name = ''] 名字
+   * @param {number} [age = 0] 年龄
+   * @param {string[]} [abilities = []] 拥有的能力
    */
-  constructor(name, age, abilities) {
+  constructor({name = '', age = 0, abilities = []}) {
     /**
      * 名字
      * @type {string}
@@ -77,9 +84,14 @@ class Animal {
 /**
  * 一个关于人的类，继承自 Animal 类
  * @extends {Animal}
+ * @example
+ * const person = new Person({
+ *   name: 'zjt',
+ *   age: 29,
+ *   abilities: ['eat', 'speak', 'run']
+ * })
  */
 class Person extends Animal {
-
   /**
    * 财产
    * @type {number}
@@ -87,7 +99,7 @@ class Person extends Animal {
   _money = 100
 
   /**
-   * 吃饭方法
+   * 吃饭方法（重写了父类的 eat 方法）
    * @override
    */
   eat() {
@@ -118,13 +130,20 @@ class Person extends Animal {
 
   /**
    * 设置人的信息
-   * @param {Object} param
-   * @param {string} param.name 名称
-   * @param {number} [param.age = 10] 年龄
+   * @param {string} name 名称
+   * @param {number} [age = 10] 年龄
    */
   setInfo({name, age = 10}) {
     this.name = name
     this.age = age
+  }
+
+  /**
+   * 添加能力
+   * @param {...string} abilities 欲添加的能力
+   */
+  addAbilities(...abilities) {
+    this.abilities.push(...abilities)
   }
 
   /**
@@ -135,6 +154,14 @@ class Person extends Animal {
   }
 }
 
-const person = new Person('zjt', 29, ['eat', 'speek', 'run'])
+// 创建 person 对象
+const person = new Person({
+  name: 'zjt',
+  age: 29,
+  abilities: ['eat', 'speak', 'run']
+})
+
 person.name = 'zhaojintian'
+person.addAbilities('sing', 'ask')
 console.log(person.getWords('Hello.'))
+console.log(person)
