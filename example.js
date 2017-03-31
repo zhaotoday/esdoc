@@ -17,9 +17,9 @@ class MyAnimal {
 class Animal {
   /**
    * 构造方法
-   * @param {string} [name = ''] 名字
-   * @param {number} [age = 0] 年龄
-   * @param {string[]} [abilities = []] 拥有的能力
+   * @param {string} [name=''] 名字
+   * @param {number} [age=0] 年龄
+   * @param {string[]} [abilities=[]] 拥有的能力
    */
   constructor({name = '', age = 0, abilities = []}) {
     /**
@@ -109,7 +109,7 @@ class Person extends Animal {
 
   /**
    * 获取他说的话
-   * @param {string} [words = ''] 话
+   * @param {string} [words=''] 话
    * @return {string}
    */
   getWords(words = '') {
@@ -132,7 +132,7 @@ class Person extends Animal {
   /**
    * 设置人的信息
    * @param {string} name 名称
-   * @param {number} [age = 10] 年龄
+   * @param {number} [age=10] 年龄
    */
   setInfo({name, age = 10}) {
     this.name = name
@@ -149,6 +149,7 @@ class Person extends Animal {
 
   /**
    * 获取财产
+   * @return {number}
    */
   _getMoney() {
     return this._money
