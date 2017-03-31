@@ -8,6 +8,7 @@ class MyAnimal {
 /**
  * 一个关于动物的类
  * 如果你想了解关于人的类的详情，请参考 {@link Person}
+ * @author 赵金添 <729234283@qq.com>
  * @see https://github.com/zhaotoday/esdoc
  * @todo 需要完善某些功能
  * @example

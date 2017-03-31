@@ -11,6 +11,45 @@ ESDoc 是一个 JavaScript 文档生成器，按照规范编写代码注释，�
 - https://esdoc.org/
 - https://esdoc.org/manual/usage/tags.html
 
+## 类似的东西
+- [JSDoc](http://usejsdoc.org/index.html)
+
+## @param、@return 特别说明
+注意下 function getString 例子，@return 后面的 {string} 和 {String}（new 形式）有大小写自之分。
+```js
+/**
+ * 获取字符串
+ * @return {string}
+ */
+function getString() {
+  return 'abc'
+}
+
+/**
+ * 获取字符串
+ * @return {String}
+ */
+function getString() {
+  return new String('abc')
+}
+
+/**
+ * 获取对象
+ * @return {Object}
+ */
+function getObject() {
+  return new Object()
+}
+
+/**
+ * 获取人
+ * @return {Person}
+ */
+function getPerson() {
+  return new Person()
+}
+```
+
 ## 比较完整的例子
 ```js
 /**
@@ -23,6 +62,7 @@ class MyAnimal {
 /**
  * 一个关于动物的类
  * 如果你想了解关于人的类的详情，请参考 {@link Person}
+ * @author 赵金添 <729234283@qq.com>
  * @see https://github.com/zhaotoday/esdoc
  * @todo 需要完善某些功能
  * @example
