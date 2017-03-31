@@ -15,7 +15,7 @@ ESDoc 是一个 JavaScript 文档生成器，按照规范编写代码注释，�
 - [JSDoc](http://usejsdoc.org/index.html)
 
 ## @param、@return 特别说明
-注意下 function getString 例子，@return 后面的 {string} 和 {String}（new 形式，new String('abc') 返回的是 String 对象的一个实例）首字母有大小写自之分。
+注意 `function getString` 例子，@return 后面的 {string} 和 {String}（new 形式，`new String('abc')` 返回的是 String 对象的一个实例）首字母有大小写自之分。
 ```js
 /**
  * 获取字符串
