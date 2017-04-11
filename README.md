@@ -15,13 +15,13 @@ ESDoc 是一个 JavaScript 文档生成器，按照规范编写代码注释，�
 - [JSDoc](http://usejsdoc.org/index.html)
 
 ## @param、@return 特别说明
-@return 后面的 {Something} 首字母需大写的情况：
+@return 后面的 {...} 首字母需大写的情况：
 - return 的是某个对象（如：String、Person、Array、Object 等）的实例；
 - return 的是一个引用类型数据（如：return []、return {}、return function () {} 等）；
 > function getString 例子，@return 后面的 {string} 和 {String} 首字母有大小写自之分，这是因为 new String('abc') 是 new SomeObject() 形式，返回的是 String 对象的一个实例。
 ```js
 /**
- * 获取字符串
+ * 返回字符串
  * @return {string}
  */
 function getString() {
@@ -29,7 +29,7 @@ function getString() {
 }
 
 /**
- * 获取字符串
+ * 返回 String 的实例
  * @return {String}
  */
 function getString() {
@@ -37,11 +37,28 @@ function getString() {
 }
 
 /**
- * 获取对象
+ * 返回 Object 的实例
  * @return {Object}
  */
 function getObject() {
   return new Object()
+}
+
+/**
+ * 返回函数
+ * @return {Function}
+ */
+function getFunction() {
+  return function () {
+  }
+}
+
+/**
+ * 返回数组
+ * @return {Array}
+ */
+function getArray() {
+  return []
 }
 
 /**
