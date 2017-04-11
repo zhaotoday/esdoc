@@ -62,7 +62,7 @@ function getArray() {
 }
 
 /**
- * 获取人
+ * 返回 Person 的实例
  * @return {Person}
  */
 function getPerson() {
