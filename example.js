@@ -21,7 +21,7 @@ class Animal {
    * @param {number} [age=0] 年龄
    * @param {string[]} [abilities=[]] 拥有的能力
    */
-  constructor({name = '', age = 0, abilities = []}) {
+  constructor ({name = '', age = 0, abilities = []}) {
     /**
      * 名字
      * @type {string}
@@ -62,7 +62,7 @@ class Animal {
    * 获取
    * @type {string}
    */
-  get value() {
+  get value () {
     return this.name
   }
 
@@ -70,7 +70,7 @@ class Animal {
    * 设置
    * @type {string}
    */
-  set value(name) {
+  set value (name) {
     this.name = name
   }
 
@@ -78,7 +78,7 @@ class Animal {
    * 吃饭方法（该方法必须被子类重写）
    * @abstract
    */
-  eat() {
+  eat () {
   }
 }
 
@@ -103,7 +103,7 @@ class Person extends Animal {
    * 吃饭方法（重写了父类的 eat 方法）
    * @override
    */
-  eat() {
+  eat () {
     console.log('I eat food.')
   }
 
@@ -112,7 +112,7 @@ class Person extends Animal {
    * @param {string} [words=''] 话
    * @return {string}
    */
-  getWords(words = '') {
+  getWords (words = '') {
     return `${this.name} said: ${words}`
   }
 
@@ -122,7 +122,7 @@ class Person extends Animal {
    * @property {string} name 名称
    * @property {number} age 年龄
    */
-  getInfo() {
+  getInfo () {
     return {
       name: this.name,
       age: this.age
@@ -134,7 +134,7 @@ class Person extends Animal {
    * @param {string} name 名称
    * @param {number} [age=10] 年龄
    */
-  setInfo({name, age = 10}) {
+  setInfo ({name, age = 10}) {
     this.name = name
     this.age = age
   }
@@ -143,7 +143,7 @@ class Person extends Animal {
    * 添加能力
    * @param {...string} abilities 欲添加的能力
    */
-  addAbilities(...abilities) {
+  addAbilities (...abilities) {
     this.abilities.push(...abilities)
   }
 
@@ -151,7 +151,7 @@ class Person extends Animal {
    * 获取财产
    * @return {number}
    */
-  _getMoney() {
+  _getMoney () {
     return this._money
   }
 }
